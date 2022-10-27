@@ -1,0 +1,36 @@
+#h1header{
+   color: green;
+   display: flex;
+   align-items: center;
+   float: left;
+   margin-bottom: 15px;
+}
+
+body {
+    background-color: rgb(172, 222, 166);
+}
+
+.imgLogo {
+    border-radius: 25px;
+    width: 50px;
+  /*   margin-left: auto;
+    margin-right: auto;
+    background-position: center;
+    background-repeat: no-repeat; */
+    float:left;
+}
+
+
+footer {
+    text-align: center;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    height: 62px;
+    
+}
+.gitFooter {
+    border-radius: 25px;
+    margin-bottom: auto;
+    width:50%;
+}
