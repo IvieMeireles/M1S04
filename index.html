@@ -1,60 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="app.js" defer></script>
-    <title>Conta Bancária</title>
-    
-</head>
-<body>
-<header>
-    <div>
-    <img
-    title="Gatin"
-    class = "imgLogo"
-    src=".\images\pixel-cat.webp"
-    alt="Gatinho da Logo">
-    <h1 id="h1header">Banco dos Batutas</h1>
-    
-    </div>
-</header>
-<br>
-<br>
-<br>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
-<h1>A</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevInBank</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- biblioteca de icones -->
+    <script src="app.js" async></script>
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="./images/pixel-cat.webp"
+        alt="Logo do Banco"
+        height="50px"
+      />
+      <h1>Banco Bonito</h1>
+    </header>
 
-<div id="footer">
-    <div id = "gitFooter">
-    <p id="redeFooter"></p>
-    <h2 id="h2Footer">Github</h2>
-    <a href="https://github.com/IvieMeireles/">
-    <img
-    id="gitFooter"
-    src=".\images\github.png" 
-    alt="github"></a>
-    </div>
-</div>
-</body>
+    <main class="main">
+      <section class="section">
+        <h2>Formulário de Cadastro</h2>
+        <br>
 
+        <form id="form" class="form">
+          <div>
+            <label for="nome" >Nome:</label>
+            <input class = "column" placeholder="Digite seu nome" required id="nome" />
+          </div>
+
+          <div>
+            <label for="cpf">CPF:</label>
+            <input class = "column" placeholder="Digite seu CPF"required id="cpf" />
+          </div>
+
+          <div>
+            <label for="celular">Celular:</label>
+            <input class = "column" placeholder="Insira seu telefone celular" required type="number" id="celular" />
+          </div>
+
+          <div>
+            <label for="senha">Senha:</label>
+            <input class = "column" placeholder="Digite sua senha" required id="senha" />
+          </div>
+
+          <div>
+            <label for="confirmacao">Confirmação senha:</label>
+            <input class = "column"  placeholder ="Confirme sua senha" required id="confirmacao" />
+          </div>
+
+          <div><br>
+            <button type="submit" class="button">Cadastrar</button>
+            <button type="reset" class="button">Limpar</button>
+          </div>
+        </form>
+      </section>
+<br><br><br>
+      <section class="section2">
+        <h2>Ações</h2>
+        <br>
+
+        <form id="form-acoes" class="form">
+          <div>
+            <label for="operacao">Operacão:</label>
+            <select class = "column" id="operacao" required>
+              <option value="SAQUE">Saque</option>
+              <option value="DEPOSITO">Depósito</option>
+              <option value="SALDO">Consulta Saldo</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="valor">Valor:</label>
+            <input class = "column"  id="valor" type="number" required />
+          </div>
+
+          <div>
+            <label for="conta">Conta:</label>
+            <input class = "column"  id="conta" type="number" required />
+          </div>
+
+          <div>
+            <label for="senha">Senha:</label>
+            <input class = "column" id="senha" required />
+          </div>
+
+          <div> <br>
+            <button type="submit" class="button">Cadastrar</button>
+            <button type="reset" class="button">Limpar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Banco Bonito</p>
+      <p>Rua Bonita 123 - Bairro de Teste, Juiz de Fora - MG 36015-000</p>
+      <a href="https://www.facebook.com/ivie.meireles/" target = "_blank" class="fa fa-facebook"></a>
+      <a href="https://www.linkedin.com/in/ivie-meireles-aa2986203/" target = "_blank" class="fa fa-linkedin"></a> <!-- o target blank faz abrir em uma nova aba o link clicado -->
+      <a href="mailto:iviemeireles@gmail.com" class="fa fa-google"></a>
+    </footer>
+  </body>
 </html>
