@@ -30,21 +30,41 @@ const cadastrarConta = (evento) => {
   }
 };
 
-const sacar = () => {};
+const form = document.getElementById('form');
+form.addEventListener('submit', cadastrarConta);
 
-const depositar = () => {};
+// Funcões operações
+const trocarOperacao = (evento) => {
+  const valor = document.getElementById('valor');
 
-const consultarSaldo = () => {};
+  valor.disabled = evento.target.value === 'SALDO';
+};
+
+const obterConta = (conta) => {
+    const contaCliente = contasClientes.find((c) => c.conta === conta);
+  
+    return contaCliente;
+  };
+  
+const sacar = () => {};// saca o valor depositado
+
+const depositar = () => {};//deposita um determinado valor 
+
+const consultarSaldo = (conta) => {;//                           consulta o saldo da conta
+  const contaCliente = obterConta(conta);
+
+  alert(`Saldo atual: ${contaCliente.saldo}`);
+};
 
 const validarConta = (conta, senha) => {
-  const contaCliente = contasClientes.find((c) => c.conta === conta);
+  const contaCliente = obterConta(conta); 
 
   return contaCliente && contaCliente.senha === senha ? true : false;
 };
 
 const efetuarOperacao = (evento) => {
   evento.preventDefault();
-  const contaValida = validarConta(parseInt(evento.target.conta.value), evento.target.senha.value);
+//   const contaValida = validarConta(parseInt(evento.target.conta.value), evento.target.senha.value); uma dupla validação, não é necessária
 
   if (contaValida) {
     switch (evento.target.operacao.value) {
@@ -55,7 +75,7 @@ const efetuarOperacao = (evento) => {
         depositar();
         break;
       case 'SALDO':
-        consultarSaldo();
+        consultarSaldo(conta);
         break;
       default:
         alert('Operação inválida');
@@ -70,6 +90,3 @@ operacao.addEventListener('change', trocarOperacao);
 
 const formAcoes = document.getElementById('form-acoes');
 formAcoes.addEventListener('submit', efetuarOperacao);
-
-const form = document.getElementById('form');
-form.addEventListener('submit', cadastrarConta);
