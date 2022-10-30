@@ -64,7 +64,13 @@ select {
 .form {
   display: inline-flex;
   gap: 20px;
-  align-items: flex-start;
+  align-items:flex-start;
+}
+.form2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items:flex-start;
 }
 
 .column {
